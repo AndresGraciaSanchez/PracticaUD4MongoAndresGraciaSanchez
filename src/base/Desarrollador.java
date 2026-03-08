@@ -14,18 +14,14 @@ public class Desarrollador {
     private String pais;
     private LocalDate fechaRegistro;
     private int contribuciones;
-    private String github;
-    private float valoracionPromedio;
     private List<ObjectId> productosIds;
 
-    public Desarrollador(String nombre, String email, String pais, LocalDate fechaRegistro, int contribuciones, String github, float valoracionPromedio, List<ObjectId> productosIds) {
+    public Desarrollador(String nombre, String email, String pais, LocalDate fechaRegistro, int contribuciones, List<ObjectId> productosIds) {
         this.nombre = nombre;
         this.email = email;
         this.pais = pais;
         this.fechaRegistro = fechaRegistro;
         this.contribuciones = contribuciones;
-        this.github = github;
-        this.valoracionPromedio = valoracionPromedio;
         this.productosIds = new ArrayList<>();
     }
 
@@ -81,22 +77,6 @@ public class Desarrollador {
         this.contribuciones = contribuciones;
     }
 
-    public String getGithub() {
-        return github;
-    }
-
-    public void setGithub(String github) {
-        this.github = github;
-    }
-
-    public float getValoracionPromedio() {
-        return valoracionPromedio;
-    }
-
-    public void setValoracionPromedio(float valoracionPromedio) {
-        this.valoracionPromedio = valoracionPromedio;
-    }
-
     public List<ObjectId> getProductosIds() {
         return productosIds;
     }
@@ -107,16 +87,10 @@ public class Desarrollador {
 
     @Override
     public String toString() {
-        return "Desarrollador{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", email='" + email + '\'' +
-                ", pais='" + pais + '\'' +
-                ", fechaRegistro=" + fechaRegistro +
-                ", contribuciones=" + contribuciones +
-                ", github='" + github + '\'' +
-                ", valoracionPromedio=" + valoracionPromedio +
-                ", productosIds=" + productosIds +
-                '}';
+        return "Desarrollador { " +
+                nombre + " | " +
+                email + " | " +
+                pais +
+                " }";
     }
 }

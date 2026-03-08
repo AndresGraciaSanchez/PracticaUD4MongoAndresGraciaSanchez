@@ -13,7 +13,6 @@ public class Producto {
     private String descripcion;
     private String version;
     private LocalDate fechaLanzamiento;
-    private float precio;
     private String categoria;
     private String licencia;
     private String repositorio;
@@ -21,12 +20,11 @@ public class Producto {
     private int descargas;
     private List<ObjectId> desarrolladoresIds;
 
-    public Producto(String nombre, String descripcion, String version, LocalDate fechaLanzamiento, float precio, String categoria, String licencia, String repositorio, float estrellas, int descargas, List<ObjectId> desarrolladoresIds) {
+    public Producto(String nombre, String descripcion, String version, LocalDate fechaLanzamiento, String categoria, String licencia, String repositorio, float estrellas, int descargas, List<ObjectId> desarrolladoresIds) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.version = version;
         this.fechaLanzamiento = fechaLanzamiento;
-        this.precio = precio;
         this.categoria = categoria;
         this.licencia = licencia;
         this.repositorio = repositorio;
@@ -79,14 +77,6 @@ public class Producto {
         this.fechaLanzamiento = fechaLanzamiento;
     }
 
-    public float getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(float precio) {
-        this.precio = precio;
-    }
-
     public String getCategoria() {
         return categoria;
     }
@@ -137,19 +127,11 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", version='" + version + '\'' +
-                ", fechaLanzamiento=" + fechaLanzamiento +
-                ", precio=" + precio +
-                ", categoria='" + categoria + '\'' +
-                ", licencia='" + licencia + '\'' +
-                ", repositorio='" + repositorio + '\'' +
-                ", estrellas=" + estrellas +
-                ", descargas=" + descargas +
-                ", desarrolladoresIds=" + desarrolladoresIds +
-                '}';
+        return "Producto { " +
+                nombre + " | " +
+                version + " | " +
+                categoria + " | " +
+                licencia +
+                " }";
     }
 }
